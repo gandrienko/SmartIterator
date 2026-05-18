@@ -1,0 +1,68 @@
+%runfile C:/PySources/EU-NUTS/EU-NUTS-acquire-ext.py --wdir
+
+[1/7] Shapefiles…
+  NUTS0: 37 | NUTS3: 1514
+
+[2/7] Demographics…
+  ↓ demo_r_pjangrp3 (population)… OK – 140,574 rows [2014–2025]
+  ✓ 1503 regions
+
+[3/7] Employment sectors…
+  ↓ nama_10r_3empers (employment NACE)… OK – 61,678 rows [2000–2024]
+  NACE codes found: ['A', 'B-E', 'C', 'F', 'G-I', 'G-J', 'J', 'K', 'K-N', 'L', 'M_N', 'O-Q', 'O-U', 'R-U', 'TOTAL']
+  ✓ 669 regions, 6 sectors
+
+[4/7] GDP per capita…
+  ↓ nama_10r_3gdp (GDP)… OK – 12,358 rows [2000–2024]
+  ✓ 1252 regions (unit: EUR_HAB)
+
+[5/7] Citizenship (ethnicity proxy)…
+  ↓ migr_pop2ctz (citizenship)… OK – 46,960 rows [1998–2025]
+  ↓ migr_pop3ctb (citizenship)… OK – 581,944 rows [1998–2025]
+  ↓ cens_11r_grcbg (citizenship)… FAIL ('NoneType' object has no attribute 'get')
+  ⚠ No citizenship data available – columns omitted
+
+[6/7] Education levels (income proxy)…
+  ↓ edat_lfse_04 (education)… OK – 36,150 rows [2000–2024]
+  ✓ 1514 regions, 3 levels
+
+[7/7] Merging and saving…
+  + employment
+  + GDP
+  + education
+
+════════════════════════════════════════════════════════════
+✓  Saved  output\nuts3_data.csv
+   1503 rows × 24 columns
+   Year range: 2018 – 2025
+
+Column coverage:
+   ID_NUTS3                         1,503 / 1,503
+   ID_NUTS0                         1,503 / 1,503
+   Name                             1,503 / 1,503
+   year                             1,503 / 1,503
+   total_population                 1,503 / 1,503
+   pct_male                         1,503 / 1,503
+   pct_female                       1,503 / 1,503
+   pct_0_14                         1,503 / 1,503
+   pct_15_24                        1,503 / 1,503
+   pct_25_44                        1,503 / 1,503
+   pct_45_64                        1,503 / 1,503
+   pct_65_plus                      1,503 / 1,503
+   pct_emp_agriculture                669 / 1,503
+   pct_emp_industry_constr            669 / 1,503
+   pct_emp_trade_transport            669 / 1,503
+   pct_emp_info_fin_prof              669 / 1,503
+   pct_emp_public_edu_health          669 / 1,503
+   pct_emp_other_services             669 / 1,503
+   gdp_pc_eur                       1,252 / 1,503
+   gdp_idx_eu100                    1,252 / 1,503
+   income_level                     1,252 / 1,503
+   pct_edu_low                      1,489 / 1,503
+   pct_edu_medium                   1,489 / 1,503
+   pct_edu_high                     1,489 / 1,503
+
+ID_NUTS3 ID_NUTS0   Name  year  total_population  pct_male  pct_female  pct_0_14  pct_15_24  pct_25_44  pct_45_64  pct_65_plus  pct_emp_agriculture  pct_emp_industry_constr  pct_emp_trade_transport  pct_emp_info_fin_prof  pct_emp_public_edu_health  pct_emp_other_services  gdp_pc_eur  gdp_idx_eu100 income_level  pct_edu_low  pct_edu_medium  pct_edu_high
+   AL011       AL  Dibër  2022          104624.0     50.33       49.67     16.94      13.07      23.21      28.64        16.71                  NaN                      NaN                      NaN                    NaN                        NaN                     NaN      4500.0           14.4     very_low          NaN             NaN           NaN
+   AL012       AL Durrës  2022          222999.0     50.14       49.86     16.41      11.77      24.74      27.65        18.05                  NaN                      NaN                      NaN                    NaN                        NaN                     NaN      6400.0           20.5     very_low          NaN             NaN           NaN
+   AL013       AL  Kukës  2022           60207.0     50.19       49.81     20.37      14.08      23.37      28.06        12.73                  NaN                      NaN                      NaN                    NaN                        NaN                     NaN      3600.0           11.5     very_low          NaN             NaN           NaN
